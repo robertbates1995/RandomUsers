@@ -14,9 +14,9 @@ struct UsersView: View {
         NavigationView {
             VStack {
                 Text("Raw JSON Data:")
-            }
-            ScrollView {
-                Text(userData.users)
+                ScrollView {
+                    Text(userData.users)
+                }
             }
         }
         .padding()
