@@ -18,9 +18,9 @@ struct UsersView: View {
                     Text(userData.users)
                 }
             }
+            .padding()
+            .navigationTitle("Random Users")
         }
-        .padding()
-        .navigationTitle("Random Users")
     }
 }
 
