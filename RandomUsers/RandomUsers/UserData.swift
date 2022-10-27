@@ -6,19 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
-class UserData {
-    var users: String = ""
+@MainActor
+class UserData: ObservableObject {
+    
+    @Published var users: String = ""
     
     init() {
         Task {
-            do {
-                let users = try await UserFetchingClient.getUsers()
-                self.users = users
-            }
-            catch {
-                print(error)
-            }
+            await loadUsers()
         }
     }
+    
+    func loadUsers() async {
+        do {
+            let users = try await UserFetchingClient.getUsers()
+            self.users = users
+        } catch {
+            print(error)
+        }
+    }
+    
+    
 }
+
