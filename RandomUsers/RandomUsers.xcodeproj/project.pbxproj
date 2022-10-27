@@ -14,6 +14,7 @@
 		7A849C3B2909E809003FAC50 /* RandomUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A849C3A2909E809003FAC50 /* RandomUsersTests.swift */; };
 		7A849C422909EB1E003FAC50 /* UserFetchingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A849C412909EB1E003FAC50 /* UserFetchingClient.swift */; };
 		7A849C442909F993003FAC50 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A849C432909F993003FAC50 /* UserData.swift */; };
+		7A849C46290B45E1003FAC50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A849C45290B45E1003FAC50 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7A849C3A2909E809003FAC50 /* RandomUsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersTests.swift; sourceTree = "<group>"; };
 		7A849C412909EB1E003FAC50 /* UserFetchingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchingClient.swift; sourceTree = "<group>"; };
 		7A849C432909F993003FAC50 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		7A849C45290B45E1003FAC50 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				7A849C262909E1DA003FAC50 /* RandomUsersApp.swift */,
+				7A849C45290B45E1003FAC50 /* User.swift */,
 				7A849C282909E1DA003FAC50 /* UsersView.swift */,
 				7A849C412909EB1E003FAC50 /* UserFetchingClient.swift */,
 				7A849C432909F993003FAC50 /* UserData.swift */,
@@ -206,6 +209,7 @@
 				7A849C292909E1DA003FAC50 /* UsersView.swift in Sources */,
 				7A849C272909E1DA003FAC50 /* RandomUsersApp.swift in Sources */,
 				7A849C442909F993003FAC50 /* UserData.swift in Sources */,
+				7A849C46290B45E1003FAC50 /* User.swift in Sources */,
 				7A849C422909EB1E003FAC50 /* UserFetchingClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
