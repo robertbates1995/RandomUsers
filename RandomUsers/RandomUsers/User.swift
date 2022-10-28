@@ -19,6 +19,10 @@ struct User: Decodable, Identifiable {
     let id: String
     let name: Name
     
+    var fullName: String {
+        name.title + ". " + name.first + " " + name.last
+    }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decode(Name.self, forKey: .name)
