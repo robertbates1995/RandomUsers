@@ -13,11 +13,9 @@ final class RandomUsersTests: XCTestCase {
     func testUserModel() throws {
         let jsonData = getTestJSONData()
         
-        do {
-            _ = try JSONDecoder().decode(Response.self, from: jsonData)
-        }
-        catch {
+        guard let _ = try JSONDecoder().decode(Response.self, from: jsonData) else {
             XCTFail("Failed to decode JSON into the model: \(error)")
+            return
         }
     }
     
