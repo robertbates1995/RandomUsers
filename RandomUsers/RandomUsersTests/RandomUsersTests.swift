@@ -8,8 +8,10 @@
 import XCTest
 @testable import RandomUsers
 
-final class RandomUsersTests: XCTestCase {
-    
+import XCTest
+@testable import RandomUsers
+
+class RandomUsersTests: XCTestCase {
     func testUserModel() throws {
         let jsonData = getTestJSONData()
         
@@ -22,13 +24,10 @@ final class RandomUsersTests: XCTestCase {
     }
     
     private func getTestJSONData() -> Data {
-        //how can path await a value before continuing?
-        let path = Bundle.main.path(forResource: "randomUsers", ofType: "json")
-        guard path != nil else {
-            //this error keeps triggering
+        guard let path = Bundle.main.path(forResource: "randomUsers", ofType: "json") else {
             fatalError("randomUsers.json file not found")
         }
-        let internalURL = URL(fileURLWithPath: path!)
+        let internalURL = URL(fileURLWithPath: path)
         return try! Data(contentsOf: internalURL)
     }
 }
