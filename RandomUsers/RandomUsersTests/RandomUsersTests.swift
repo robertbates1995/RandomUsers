@@ -22,10 +22,13 @@ final class RandomUsersTests: XCTestCase {
     }
     
     private func getTestJSONData() -> Data {
-        guard let path = Bundle.main.path(forResource: "randomUsers", ofType: "json") else {
+        //how can path await a value before continuing?
+        let path = Bundle.main.path(forResource: "randomUsers", ofType: "json")
+        guard path != nil else {
+            //this error keeps triggering
             fatalError("randomUsers.json file not found")
         }
-        let internalURL = URL(fileURLWithPath: path)
+        let internalURL = URL(fileURLWithPath: path!)
         return try! Data(contentsOf: internalURL)
     }
 }
