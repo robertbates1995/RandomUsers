@@ -14,17 +14,13 @@ import XCTest
 class RandomUsersTests: XCTestCase {
     func testUserModel() throws {
         let jsonData = getTestJSONData()
+        _ = try JSONDecoder().decode(Response.self, from: jsonData)
         
-        do {
-            _ = try JSONDecoder().decode(Response.self, from: jsonData)
-        }
-        catch {
-            XCTFail("Failed to decode JSON into the model: \(error)")
-        }
     }
     
     private func getTestJSONData() -> Data {
-        guard let path = Bundle.main.path(forResource: "randomUsers", ofType: "json") else {
+        let bundle = Bundle(for: Self.self)
+        guard let path = bundle.path(forResource: "randomUsers", ofType: "json") else {
             fatalError("randomUsers.json file not found")
         }
         let internalURL = URL(fileURLWithPath: path)
