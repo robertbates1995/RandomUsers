@@ -15,7 +15,6 @@ class RandomUsersTests: XCTestCase {
     func testUserModel() throws {
         let jsonData = getTestJSONData()
         _ = try JSONDecoder().decode(Response.self, from: jsonData)
-        
     }
     
     private func getTestJSONData() -> Data {
